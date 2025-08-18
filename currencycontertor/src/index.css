@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2&quot);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+html {
+  font-size: 62.5%;
+}
+#main {
+  width: 45rem;
+  height: 25rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  place-items: center;
+  padding: 2rem;
+}
+#heading {
+  font-size: 3rem;
+}
+#input_box {
+  background-color: white;
+  width: 40rem;
+  height: 8rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+#label {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+#number_input {
+  width: 20rem;
+  height: 3rem;
+  border: none;
+}
+#number_input:focus-visible {
+  border: none;
+}
+#select_input {
+  width: 8rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: oklch(96.7% 0.003 264.542);
+}
+
+/*swap  button  */
+#swap_btn {
+  position: absolute;
+  top: 25rem;
+  right: 56rem;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: aqua;
+  border: none;
+  cursor: pointer;
+}
+
+#button {
+  width: 100%;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: aqua;
+  border: none;
+  cursor: pointer;
+}
