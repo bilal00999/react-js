@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { useDispatch, useSelector } from "react-redux";
+import { increment, decrement, reset } from "./features/counterSlice";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch();
+  const read = useSelector((state) => state.value);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>redux counter app</h1>
+      <h2>counter:{read} </h2>
+      <button onClick={() => dispatch(increment())}>increment</button>
+      <button onClick={() => dispatch(decrement())}>decrement</button>
+      <button onClick={() => dispatch(reset(5))}>reset</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
